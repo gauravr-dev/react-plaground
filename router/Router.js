@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import isLoading from '../selectors/isLoading';
 
 
 /**
  * 
- * should have prop to get route
- * should have prop to get component to render
+ * This class will be responsible to listen and respond to location/route changes
+ * 
  * 
  */
 class Router extends Component {  
@@ -22,7 +21,6 @@ class Router extends Component {
   const mapState = ({ page, direction, ...state }) => ({
     page,
     direction,
-    isLoading: isLoading(state)
   })
   
   export default connect(mapState)(Router)
